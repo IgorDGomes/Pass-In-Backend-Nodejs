@@ -29,6 +29,28 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 
 - [ ] O check-in no evento será realizado através de um QRCode;
 
+## Anotações
+
+Métodos HTTP: GET, POST, PUT, DELETE, PATCH, HEAD, OPTIONS, ...
+
+Corpo da requisição (Request Body)
+Parâmetros de busca (Search Params / Query Params) `http://localhost:5555/users?name=Name`
+Parâmetros de rota (Route Params) -> Identificação de recursos `DELETE http://localhost:5555/users/5`
+Cabeçalhos (Headers) -> Contexto
+
+Semânticas = Significado
+
+Driver nativo (Básico, escrito na mão, otimização SQL) / Query Builders (Knex.js, SQL com javascript) / ORMs (Automatiza vários processos do banco de dados ao mesmo tempo, versionamento do banco de dados)
+Object Relational Mapping (Hibernate, Doctrine, ActiveRecord)
+(Sequelize, Drizzle, Prisma)
+
+JSON - Javascript Object Notation
+
+20x -> Sucesso
+30x -> Redirecionamento
+40x -> Erro do cliente (Erro em alguma informação enviada por QUEM está fazendo a chamada para API)
+50x -> Erro do servidor (Um erro que está acontecendo INDEPENDENTE do que está sendo enviado para o servidor)
+
 ## Documentação da API (Swagger)
 
 Para documentação da API, acesse o link: https://nlw-unite-nodejs.onrender.com/docs
@@ -82,6 +104,16 @@ CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
 ```
 
 
+
+
+
+
+
+
+
+
+
+
 <!--
     npm i typescript @types/node -D
     npx tsc --init
@@ -101,4 +133,5 @@ CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
     npx prisma migrate dev
     npx prisma studio
     npm i zod
+    npm i fastify-type-provider-zod
 -->
