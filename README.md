@@ -134,4 +134,5 @@ CREATE UNIQUE INDEX "check_ins_attendeeId_key" ON "check_ins"("attendeeId");
     npx prisma studio
     npm i zod
     npm i fastify-type-provider-zod
+    npx prisma db seed
 -->
